@@ -1,2 +1,30 @@
 Задача: Diamond Collector 
-Теги: #complete_search 
+Теги: #complete_search #two_pointers
+Ошибка: WA
+Описание: 
+Долго не понимала принцип работы счетчика и постоянно приписывала j=i+1 для того чтобы не было повторений.
+Как оказалось,зря. Было найдено лучшее решение в стиле двух указателей. Мне лень расписывать.
+Код:
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    freopen("diamond.in", "r", stdin);
+    freopen("diamond.out", "w", stdout);
+    int n, k;
+    cin >> n >> k;
+    vector<int> d(n);
+    for (int i=0; i<n; i++) {
+        cin >> d[i];
+    }
+    int ans=0;
+    sort(d.begin(), d.end());
+        for (int i=0; i<n; i++) {
+            int cnt=0;
+            for (int j=i; j<n; j++) {
+                if (d[j]-d[i]>k) break;
+                else cnt++;
+            }
+            ans=max(cnt, ans);
+        }
+        cout << ans;
+}
