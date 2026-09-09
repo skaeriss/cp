@@ -1,0 +1,60 @@
+Задача: Usaco bronze Bovine Genomics
+Теги: #set #complete_search #usaco_bronze
+Ошибка: TLE 
+Описание:
+В задаче нужно пройтись не по столбцам, а по строкам и проверить эти строки на наличие похожих элементов. 
+Для хранения элементов я использовала set, а для проверки прохождение с итератором.
+Эти итераторы и вызвали TLE. Но это скорее я неправильно написала код.
+В любом случае я нашла другой метод, который работает за линейное время O(n+m)
+Set_intersection
+На примере:
+bool check (const set<char> &s, const set<char> &p) { //const гарантирует то, что set не изменится, а & передает без создания нового set
+    vector<char> common;
+    set_intersection(
+        s.begin(), s.end(), 
+        p.begin(), p.end(), 
+        back_inserter(common)
+        );
+        if (common.empty()) return true;
+        else return false;
+}
+Примечание: мне сказали, что есть способ эффективнее, но меня это мало волнует.
+Код:
+#include <bits/stdc++.h>
+using namespace std;
+bool check (const set<char> &s, const set<char> &p) {
+    vector<char> common;
+    set_intersection(
+        s.begin(), s.end(), 
+        p.begin(), p.end(), 
+        back_inserter(common)
+        );
+        if (common.empty()) return true;
+        else return false;
+}
+int main() {
+    freopen("cownomics.in", "r", stdin);
+    freopen("cownomics.out", "w", stdout);
+    int n, m, ans=0;
+    cin >> n >> m;
+    vector<string> spotty(n);
+    for (int i=0; i<n; i++) {
+        cin >> spotty[i];
+    }
+    vector<string> plain(n);
+    for (int i=0; i<n; i++) {
+        cin >> plain[i];
+    }
+    set<char> s;
+    set<char> p;
+    for (int j=0; j<m; j++) {
+        s.clear();
+        p.clear();
+        for (int i=0; i<n; i++) {
+          s.insert(spotty[i][j]);
+          p.insert(plain[i][j]);
+        }
+        if (check(s, p)) ans++;
+    }
+    cout << ans;
+}
