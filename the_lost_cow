@@ -1,0 +1,30 @@
+Задача: The Lost Cow
+Теги: #simulation
+Ошибка: WA
+Описание:
+Ну, мне нечего сказать про эту задачу, пару попыток были провалом.
+Это из-за недосыпа, а не из-за сложности задачи.
+Код:
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    freopen("lostcow.in", "r", stdin);
+    freopen("lostcow.out", "w", stdout);
+    int x, y;
+    cin >> x >> y;
+    int pos=x, t=0, ans=0, change=1, new_pos=x+1;
+    while (true) {
+        if (t%2==0) new_pos=x+change;
+        else new_pos=x-change;
+            t++;
+            change*=2;
+            if (pos>=y && y>=new_pos || new_pos>=y && y>=pos) {
+                ans+=abs(y-pos);
+                break;
+        }
+        else ans+=abs(new_pos-pos);
+        pos=new_pos;
+    }
+    cout << ans;
+}
+
