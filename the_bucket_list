@@ -1,0 +1,25 @@
+Задача: The Bucket List
+Теги: #simulation
+Описание: суть задачи была в том, чтобы найти максимум ведер в один момент.
+Реализовать можно разными способами, я реализовала не совсем эффективно, я устала.
+Код:
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    freopen("blist.in", "r", stdin);
+    freopen("blist.out", "w", stdout);
+   int n;
+   cin >> n;
+   vector<int> buckets(1001, 0);
+   for (int i=0; i<n; i++) {
+       int s, t, b;
+       cin >> s >> t >> b;
+       for (int j=s; j<t; j++) buckets[j]+=b;
+   }
+   int mx=0;
+   for (auto c : buckets) {
+       mx=max(c, mx);
+   }
+   cout << mx;
+}
+
