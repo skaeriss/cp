@@ -7,6 +7,8 @@
 | Daisy Chains | Bronze | `#complete_search` | [daisy_chains](https://github.com/skaeriss/cp/blob/1e8e289c27355d7bd4ad1a4667664ede3ae78233/daisy_chains) |
 | Cow Gymnastics | Bronze | `#complete_search` `#map` | [cow_gymnastics](https://github.com/skaeriss/cp/blob/c5b2edc80433223628ff8d5695c90885cbca03ea/cow_gymnastics) |
 | The Bovine Shuffle | Bronze | `#simulation` | [the_bovine_shuffle](https://github.com/skaeriss/cp/blob/9e18dd048cb8b8aacba58327d7044f0c89e3b37f/the_bovine_shuffle) |
+| The Bucket List | Bronze | `#simulation` | [the_bucket_list](https://github.com/skaeriss/cp/blob/d21e472c1cee74009029f918fcd5ebeef29ee7b9/the_bucket_list) |
+| The lost Cow | Bronze |`#simulation` | 
 ### Codeforces
 | Задача | Сложность | Теги | Разбор |
 |
