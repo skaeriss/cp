@@ -5,6 +5,8 @@
 | Bovine Genomics | Bronze | `#set` `#complete_search` | [bovine_genomics](https://github.com/skaeriss/cp/blob/13a82139a2fff0f993095f07424e861e47c68bc2/bovine_genomics) |                  
 | Diamond Collector | Bronze | `#complete_search` `#two_pointers` | [diamond_collector](https://github.com/skaeriss/cp/blob/3b1e252a06051f4d2be161587f39277babddd897/diamond_collector) |
 | Daisy Chains | Bronze | `#complete_search` | [daisy_chains](https://github.com/skaeriss/cp/blob/1e8e289c27355d7bd4ad1a4667664ede3ae78233/daisy_chains) |
+| Cow Gymnastics | Bronze | `#complete_search` `#map` | [cow_gymnastics](https://github.com/skaeriss/cp/blob/c5b2edc80433223628ff8d5695c90885cbca03ea/cow_gymnastics) |
+
 ### Codeforces
 | Задача | Сложность | Теги | Разбор |
 |
